@@ -27,6 +27,22 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
+    if (message.content === '!birb') {
+        number = 1;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/birb" + imageNumber + ".png"]})
+    } 
+})
+
+client.on('message', message => {
+    if (message.content === '!poncho') {
+        number = 9;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/poncho" + imageNumber + ".png"]})
+    } 
+})
+
+client.on('message', message => {
     if (message.content === '!ip') {
         message.channel.send('The Server IP Is: "play.seacraft.us" [Open to Donators, Opening in June!]')
     } 
