@@ -26,6 +26,23 @@ client.on('message', message => {
     } 
 })
 
+client.on('message', message => {
+    if (message.content === '!ip') {
+        message.channel.send('The Server IP Is: "play.seacraft.us" [Open to Donators, Opening in June!]')
+    } 
+})
+
+client.on('message', message => {
+    if (message.content === '!store') {
+        message.channel.send('The Store Can be found at: https://seacraftmc.craftingstore.net/ ')
+    } 
+})
+
+client.on('message', message => {
+    if (message.content === '!apply') {
+        message.channel.send('You can apply using our form found here!: https:forms/ezWcXygAn9CY27e96')
+    } 
+})
 
 client.on('ready', () => {
     console.log('Bot ready!')
