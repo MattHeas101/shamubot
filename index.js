@@ -4,7 +4,7 @@ const client = new Discord.Client()
 
 client.on('message', message => {
     if (message.content === '!whale') {
-        number = 11;
+        number = 10;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/whale" + imageNumber + ".png"]})
     } 
@@ -12,7 +12,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!dolphin') {
-        number = 11;
+        number = 10;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/dolphin" + imageNumber + ".png"]})
     } 
@@ -20,7 +20,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!sealion') {
-        number = 11;
+        number = 5;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/sealion" + imageNumber + ".png"]})
     } 
