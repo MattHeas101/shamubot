@@ -40,7 +40,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!apply') {
-        message.channel.send('You can apply using our form found here!: https:forms/ezWcXygAn9CY27e96 ')
+        message.channel.send('You can apply using our form found here!: https:forms.gle/ezWcXygAn9CY27e96 ')
     } 
 })
 
