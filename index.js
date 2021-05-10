@@ -8,7 +8,7 @@ client.on('message', message => {
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/whale" + imageNumber + ".png"]})
     } 
-})g
+})
 
 client.on('message', message => {
     if (message.content === '!dolphin') {
@@ -31,4 +31,4 @@ client.on('ready', () => {
     console.log('Bot ready!')
 })
 
-client.login(config.token)
+client.login(process.env.DJS_TOKEN)
