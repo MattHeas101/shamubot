@@ -66,6 +66,12 @@ client.on('message', message => {
     } 
 })
 
+client.on('message', message => {
+    if (message.content === '!nextevent') {
+        message.channel.send('YOur Next Public event will be Opening Day in June! Keep an eye out for more details! ')
+    } 
+})
+
 const logo = 'https://cdn.discordapp.com/attachments/654020703846137886/841260861447208980/SCMC_Logo.png'
 
 client.on('message', message => {
