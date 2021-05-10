@@ -44,6 +44,63 @@ client.on('message', message => {
     } 
 })
 
+client.on('message', message => {
+    if (message.content === '!website') {
+        message.channel.send('You can find out store here!: https://seacraftmc.us/ ')
+    } 
+})
+
+const logo = 'https://cdn.discordapp.com/attachments/654020703846137886/841260861447208980/SCMC_Logo.png'
+
+client.on('message', message => {
+    if (message.content === '!help') {
+        const embed = new Discord.MessageEmbed()
+            .setTitle("Here is a list of my Commands!")
+            .setThumbnail(logo)
+            .setColor('#0000FF')
+            .addFields(
+                {
+                    name: "!whale",
+                    value: "Gives you a photo of a Whale!",
+                    inline: false
+                },
+                {
+                    name: "!sealion",
+                    value: "Gives you a photo of a Sealion!",
+                    inline: false
+                },
+                {
+                    name: "!dolphin",
+                    value: "Gives you a photo of a Dolphin!",
+                    inline: false
+                },
+                {
+                    name: "!ip",
+                    value: "Provides you with the Server IP!",
+                    inline: false
+                },
+                {
+                    name: "!store",
+                    value: "Provides you with a link to our Online Store!",
+                    inline: false
+                },
+                {
+                    name: "!apply",
+                    value: "Gives you a link to our Staff Application Form!",
+                    inline: false
+                },
+                {
+                    name: "!website",
+                    value: "Gives you a Link to our Website!",
+                    inline: false
+                },
+            )
+
+        message.channel.send(embed)
+    }
+})
+
+
 client.on('ready', () => {
     console.log('Bot ready!')
 })
