@@ -68,7 +68,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!nextevent') {
-        message.channel.send('YOur Next Public event will be Opening Day in June! Keep an eye out for more details! ')
+        message.channel.send('Our Next Public event will be Opening Day in June! Keep an eye out for more details! ')
     } 
 })
 
