@@ -28,7 +28,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!birb') {
-        number = 1;
+        number = 2;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/birb" + imageNumber + ".png"]})
     } 
@@ -74,15 +74,22 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!beluga') {
-        number = 9;
+        number = 10;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/beluga" + imageNumber + ".png"]})
+    } 
+})
+client.on('message', message => {
+    if (message.content === '!turtle') {
+        number = 10;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/turtle" + imageNumber + ".png"]})
     } 
 })
 
 client.on('message', message => {
     if (message.content === '!show') {
-        number = 9;
+        number = 15;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/show" + imageNumber + ".png"]})
     } 
@@ -118,29 +125,34 @@ client.on('message', message => {
                     inline: true
                 },
                 {
+                    name: "!show",
+                    value: "Gives you a photo of a !eaWorld Show!",
+                    inline: true
+                },
+                {
                     name: "!whale",
                     value: "Gives you a photo of a Whale!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!sealion",
                     value: "Gives you a photo of a Sealion!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!dolphin",
                     value: "Gives you a photo of a Dolphin!",
-                    inline: false
-                },
-                {
-                    name: "!show",
-                    value: "Gives you a photo of a !eaWorld Show!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!beluga",
                     value: "Gives you a photo of a Beluga Whale!",
-                    inline: false
+                    inline: true
+                },
+                {
+                    name: "!turtle",
+                    value: "Gives you a photo of a Turtle!",
+                    inline: true
                 },
             )
 
