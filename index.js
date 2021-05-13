@@ -72,6 +72,22 @@ client.on('message', message => {
     } 
 })
 
+client.on('message', message => {
+    if (message.content === '!beluga') {
+        number = 9;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/beluga" + imageNumber + ".png"]})
+    } 
+})
+
+client.on('message', message => {
+    if (message.content === '!show') {
+        number = 9;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/show" + imageNumber + ".png"]})
+    } 
+})
+
 const logo = 'https://cdn.discordapp.com/attachments/654020703846137886/841260861447208980/SCMC_Logo.png'
 
 client.on('message', message => {
@@ -81,21 +97,6 @@ client.on('message', message => {
             .setThumbnail(logo)
             .setColor('#0000FF')
             .addFields(
-                {
-                    name: "!whale",
-                    value: "Gives you a photo of a Whale!",
-                    inline: false
-                },
-                {
-                    name: "!sealion",
-                    value: "Gives you a photo of a Sealion!",
-                    inline: false
-                },
-                {
-                    name: "!dolphin",
-                    value: "Gives you a photo of a Dolphin!",
-                    inline: false
-                },
                 {
                     name: "!ip",
                     value: "Provides you with the Server IP!",
@@ -114,6 +115,31 @@ client.on('message', message => {
                 {
                     name: "!website",
                     value: "Gives you a Link to our Website!",
+                    inline: false
+                },
+                {
+                    name: "!whale",
+                    value: "Gives you a photo of a Whale!",
+                    inline: false
+                },
+                {
+                    name: "!sealion",
+                    value: "Gives you a photo of a Sealion!",
+                    inline: false
+                },
+                {
+                    name: "!dolphin",
+                    value: "Gives you a photo of a Dolphin!",
+                    inline: false
+                },
+                {
+                    name: "!show",
+                    value: "Gives you a photo of a !eaWorld Show!",
+                    inline: false
+                },
+                {
+                    name: "!beluga",
+                    value: "Gives you a photo of a Beluga Whale!",
                     inline: false
                 },
             )
