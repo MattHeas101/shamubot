@@ -100,22 +100,22 @@ client.on('message', message => {
                 {
                     name: "!ip",
                     value: "Provides you with the Server IP!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!store",
                     value: "Provides you with a link to our Online Store!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!apply",
                     value: "Gives you a link to our Staff Application Form!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!website",
                     value: "Gives you a Link to our Website!",
-                    inline: false
+                    inline: true
                 },
                 {
                     name: "!whale",
