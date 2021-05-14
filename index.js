@@ -73,6 +73,12 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
+    if (message.content === '!feedback') {
+        message.channel.send('Here is a link to the Feedback form for the bot! All suggestions are taken into consideration by both the developers and Owners! INSERT LINK HERE ')
+    } 
+})
+
+client.on('message', message => {
     if (message.content === '!beluga') {
         number = 10;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
@@ -89,7 +95,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!show') {
-        number = 15;
+        number = 32;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/show" + imageNumber + ".png"]})
     } 
@@ -126,7 +132,7 @@ client.on('message', message => {
                 },
                 {
                     name: "!show",
-                    value: "Gives you a photo of a !eaWorld Show!",
+                    value: "Gives you a photo of a SeaWorld Show!",
                     inline: true
                 },
                 {
