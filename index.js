@@ -85,6 +85,15 @@ client.on('message', message => {
         message.channel.send ( {files: ["./images/beluga" + imageNumber + ".png"]})
     } 
 })
+
+client.on('message', message => {
+    if (message.content === '!jellyfish') {
+        number = 10;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/jellyfish" + imageNumber + ".png"]})
+    } 
+})
+
 client.on('message', message => {
     if (message.content === '!turtle') {
         number = 10;
