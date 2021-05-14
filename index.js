@@ -112,7 +112,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!dawn') {
-        number = 12;
+        number = 10;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/dawn" + imageNumber + ".png"]})
     } 
