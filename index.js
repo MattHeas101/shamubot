@@ -74,7 +74,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!feedback') {
-        message.channel.send('Here is a link to the Feedback form for the bot! All suggestions are taken into consideration by both the developers and Owners! INSERT LINK HERE ')
+        message.channel.send('Here is a link to the Feedback form for the bot! All suggestions are taken into consideration by both the Bot Developers and SeaCraft Owners! INSERT LINK HERE ')
     } 
 })
 
