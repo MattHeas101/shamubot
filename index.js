@@ -110,6 +110,14 @@ client.on('message', message => {
     } 
 })
 
+client.on('message', message => {
+    if (message.content === '!dawn') {
+        number = 12;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        message.channel.send ( {files: ["./images/dawn" + imageNumber + ".png"]})
+    } 
+})
+
 const logo = 'https://cdn.discordapp.com/attachments/654020703846137886/841260861447208980/SCMC_Logo.png'
 
 client.on('message', message => {
