@@ -44,7 +44,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!ip') {
-        message.channel.send('The Server IP Is: "play.seacraft.us" [Open to Donators, Opening in June!]')
+        message.channel.send('The Server IP Is: "play.seacraftmc.us" [Open to Donators, Opening in June!]')
     } 
 })
 
@@ -194,7 +194,7 @@ client.on('ready', () => {
 
     client.user.setPresence({
         activity: {
-            name: 'play.seacraft.us',
+            name: 'play.seacraftmc.us',
             type: 'PLAYING'
         }
     });
