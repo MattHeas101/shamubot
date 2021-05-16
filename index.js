@@ -74,7 +74,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!feedback') {
-        message.channel.send('Here is a link to the Feedback form for the bot! All suggestions are taken into consideration by both the Bot Developers and SeaCraft Owners! INSERT LINK HERE ')
+        message.channel.send('Here is a link to the Feedback form for the bot! All suggestions are taken into consideration by SeaCraft Owners! https://docs.google.com/forms/d/e/1FAIpQLScVfL50ihW53NbF6DwbzB4tv6hAuyQh_Tfi99HTw2C-ITAX-A/viewform ')
     } 
 })
 
@@ -177,6 +177,11 @@ client.on('message', message => {
                     value: "Gives you a photo of a Turtle!",
                     inline: true
                 },
+                {
+                    name: "!feedback",
+                    value: "Provides you with a link to our feedback form!!",
+                    inline: true
+                },
             )
 
         message.channel.send(embed)
@@ -185,7 +190,15 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-    console.log('Bot ready!')
-})
+    console.log('Bot ready!');
+
+    client.user.setPresence({
+        activity: {
+            name: 'play.seacraft.us',
+            type: 'PLAYING'
+        }
+    });
+        },
+)
 
 client.login(process.env.DJS_TOKEN)
