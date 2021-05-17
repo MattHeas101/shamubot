@@ -28,7 +28,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!birb') {
-        number = 2;
+        number = 6;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         message.channel.send ( {files: ["./images/birb" + imageNumber + ".png"]})
     } 
@@ -62,7 +62,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!website') {
-        message.channel.send('You can find out store here!: https://seacraftmc.us/ ')
+        message.channel.send('You can find our store here!: https://seacraftmc.us/ ')
     } 
 })
 
